@@ -1,0 +1,36 @@
+## Mapper
+------------ RunningStatus ------------
+[taskId] slave1/attempt_201404152256_0022_m_000000_0
+[RunningPhase] map
+[is map() running] true
+
+------------ InputSplit ------------
+[InputSplit] 268,435,456 B
+
+------------ SpillBuffer ------------
+kvbuffer = 0 | 0, kvoffsets = 0 | 0
+
+----- Spills without combine --------
+
+------------ Merge ------------
+
+------------ Counters ------------
+[FILE_BYTES_READ]    251080704
+[HDFS_BYTES_READ]    4461
+[FILE_BYTES_WRITTEN] 187266
+
+[Map input records]  1
+[Map output records] 0
+[Map output bytes]   -1
+
+[Combine input records]  -1
+[Combine output records] -1
+
+------------ JvmUsage ------------
+
+------------ HeapDumps ------------
+[HeapDump] /tmp/mapFileBytesRead-63746048-inrec-1-outrec-0-pid-550.hprof
+[HeapDump] /tmp/mapFileBytesRead-135704576-inrec-1-outrec-0-pid-550.hprof
+[HeapDump] /tmp/mapFileBytesRead-206819328-inrec-1-outrec-0-pid-550.hprof
+[HeapDump] /tmp/mapFileBytesRead-244887552-inrec-1-outrec-0-pid-550.hprof
+

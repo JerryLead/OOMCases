@@ -1,0 +1,32 @@
+## Mapper
+------------ RunningStatus ------------
+[taskId] attempt_201404152256_0001_m_000002_0
+[RunningPhase] spill
+[is map() running] false
+
+------------ map() ------------
+[Map input bytes]    362,377,587 | 536,870,912
+[Map input records]  6,128,490
+[Map output records] 6,128,489
+[Map output bytes]   503,316,368
+
+------------ SpillBuffer ------------
+[io.sort.mb] = 600
+[kvbuffer]   = 503,316,480
+[kvindices]  = 94,371,840
+[kvoffsets]  = 31,457,280
+
+[spillBytes   | kvbufferBytes] = 402,653,184 | 503,316,480
+[spillRecords | kvoffsetsLen]  = 6,291,456 | 7,864,320
+
+----- memCombine() -----
+[Spill number] 0
+[PartitionId]  4
+[Combine input records]  747,932 | 798,808
+[Combine output records] 263
+
+------------ Spills ------------
+[Spill 0] records = 4902718 | -1, bytes = 402653117 | -1
+
+------------ Segments ------------
+

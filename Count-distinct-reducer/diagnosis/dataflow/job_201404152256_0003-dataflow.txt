@@ -1,0 +1,95 @@
+## Mapper
+------------ RunningStatus ------------
+[taskId] attempt_201404152256_0003_m_000000_0
+[RunningPhase] over
+[is map() running] false
+
+------------ map() ------------
+[Map input bytes]    268,439,917 | 268,435,456
+[Map input records]  4,540,136
+[Map output records] 4,540,136
+[Map output bytes]   372,847,763
+
+------------ SpillBuffer ------------
+[io.sort.mb] = 600
+[kvbuffer]   = 597,688,320
+[kvindices]  = 23,592,960
+[kvoffsets]  = 7,864,320
+
+[spillBytes   | kvbufferBytes] = 478,150,656 | 597,688,320
+[spillRecords | kvoffsetsLen]  = 1,572,864 | 1,966,080
+
+----- memCombine() -----
+[Spill number] 2
+[PartitionId]  8
+[Combine input records]  61,416 | 60,183
+[Combine output records] 1,804
+
+------------ Spills ------------
+[Spill 0] records = 1572864 | 415, bytes = 129187926 | 89878083
+[Spill 1] records = 1572863 | 429, bytes = 129114107 | 89804657
+[Spill 2] records = 1394409 | 389, bytes = 114545730 | 79696511
+
+------------ diskCombine() ------------
+[Combine input records]  131 | 131
+[Combine output records] 62
+
+------------ Segments ------------
+[partition 0][taskId 0] records = 65, bytes = 7779986
+[partition 1][taskId 0] records = 66, bytes = 32566972
+[partition 2][taskId 0] records = 63, bytes = 45684984
+[partition 3][taskId 0] records = 56, bytes = 48455100
+[partition 4][taskId 0] records = 72, bytes = 42368073
+[partition 5][taskId 0] records = 55, bytes = 32343539
+[partition 6][taskId 0] records = 69, bytes = 23115987
+[partition 7][taskId 0] records = 63, bytes = 15985675
+[partition 8][taskId 0] records = 62, bytes = 11060238
+
+## Reducer
+------------ RunningStatus ------------
+[taskId] attempt_201404152256_0003_r_000002_0
+[RunningPhase] sort
+[isInMemMergeRunning] true
+
+------------ SegmentsInShuffle ------------
+[Runtime_heap] = 1,507,328,000
+[ShuffleBound] = 1,055,129,600
+[MergeBound]   = 696,385,536
+
+------------ Total segments ------------
+[partition 2][taskId 0] records = 63, bytes = 45684984
+[partition 2][taskId 1] records = 61, bytes = 45691078
+[partition 2][taskId 2] records = 55, bytes = 45679016
+[partition 2][taskId 3] records = 64, bytes = 45756784
+[partition 2][taskId 4] records = 63, bytes = 45684664
+[partition 2][taskId 5] records = 61, bytes = 45684858
+[partition 2][taskId 6] records = 64, bytes = 45691580
+[partition 2][taskId 7] records = 68, bytes = 45666662
+[partition 2][taskId 8] records = 68, bytes = 45691023
+[partition 2][taskId 9] records = 63, bytes = 45672007
+[partition 2][taskId 10] records = 64, bytes = 45744906
+[partition 2][taskId 11] records = 60, bytes = 45650354
+[partition 2][taskId 12] records = 69, bytes = 45751456
+[partition 2][taskId 13] records = 62, bytes = 45608889
+[partition 2][taskId 14] records = 62, bytes = 45743077
+[partition 2][taskId 15] records = 59, bytes = 45600252
+[partition 2][taskId 16] records = 64, bytes = 45724208
+[partition 2][taskId 17] records = 58, bytes = 45663253
+[partition 2][taskId 18] records = 59, bytes = 28400597
+[partition 2][taskId 19] records = 82, bytes = 22601462
+[partition 2][taskId 20] records = 83, bytes = 23717439
+[partition 2][taskId 21] records = 82, bytes = 21822891
+
+[ShuffledSegments] = [20, 19, 21, 18, 16, 0, 3, 13, 7, 5, 14, 17, 12, 11, 4, 10, 15, 8, 6, 9, 1, 2]
+[addedIntoMemorySegs] = [19, 20, 21, 18, 16, 0, 13, 3, 5, 14, 7, 17, 4, 11, 10, 15, 8, 6]
+
+------------ memCombine() ------------
+[Combine input records]  21 | 1,186
+[Combine output records] 1
+
+------------ reduce() ------------
+[Reduce input records] 0 | 1,414
+[Reduce input groups] 0
+[Reduce output records] 0
+
+

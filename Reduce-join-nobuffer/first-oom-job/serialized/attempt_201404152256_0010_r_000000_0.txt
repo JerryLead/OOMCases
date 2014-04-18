@@ -1,0 +1,51 @@
+## Reducer
+------------ RunningStatus ------------
+[taskId] slave2/attempt_201404152256_0010_r_000000_0
+[RunningPhase] reduce
+[isInMemMergeRunning] false
+
+------------ ShuffleBuffer ------------
+[ShuffleBound] 1006 MB
+
+------------ Shuffle ------------
+[Segment 0] 104597711, RAM, attempt_201404152256_0010_m_000003_0
+[Segment 1] 104548507, RAM, attempt_201404152256_0010_m_000005_0
+[Segment 2] 104597711, RAM, attempt_201404152256_0010_m_000002_0
+[Segment 3] 104574443, RAM, attempt_201404152256_0010_m_000009_0
+[Segment 4] 104599546, RAM, attempt_201404152256_0010_m_000001_0
+[Segment 5] 104585764, RAM, attempt_201404152256_0010_m_000007_0
+[Segment 6] 104599546, RAM, attempt_201404152256_0010_m_000000_0
+[Segment 7] 104585764, RAM, attempt_201404152256_0010_m_000006_0
+[Segment 8] 104548507, RAM, attempt_201404152256_0010_m_000004_0
+[Segment 9] 104523976, RAM, attempt_201404152256_0010_m_000010_0
+[Segment 10] 104574443, RAM, attempt_201404152256_0010_m_000008_0
+[Segment 11] 104523976, RAM, attempt_201404152256_0010_m_000011_0
+
+-------- MergeInShuffle --------
+[InMemMerge 0] ids [7](2,7,5,1,3,9,6), records = 10917773 | 10917773, bytes = 732089418 | 732089406
+
+------------ Sort ------------
+[InMemSortMerge] num = 5, records = 7797201, bytes = 522770428 | 522770420
+[MixSortMerge] InMemSegsNum = 0, InMemSegsBytes = 0, OnDiskSegsNum = 2, OnDiskSegsBytes = 1254859834
+
+------------ Counters ------------
+[FILE_BYTES_READ]        477118464
+[HDFS_BYTES_WRITTEN]     -1
+[FILE_BYTES_WRITTEN]     1254919691
+
+[Reduce shuffle bytes]   1254859894
+[Reduce input groups]    1
+[Reduce input records]   7129415
+[Reduce output records]  0
+
+[Combine input records]  0
+[Combine output records] 0
+
+------------ JvmUsage ------------
+[Space] Used | Committed | Total
+[Heap] 1166 | 1333 | 1500
+[NewGen] 166 | 333 | 500
+[OldGen] 1000 | 1000 | 1000
+
+------------ HeapDumps ------------
+

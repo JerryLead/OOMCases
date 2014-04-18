@@ -1,0 +1,60 @@
+## Reducer
+------------ RunningStatus ------------
+[taskId] slave9/attempt_201404152256_0018_r_000000_0
+[RunningPhase] reduce
+[isInMemMergeRunning] false
+
+------------ ShuffleBuffer ------------
+[ShuffleBound] 1006 MB
+
+------------ Shuffle ------------
+[Segment 0] 104597711, RAM, attempt_201404152256_0018_m_000003_0
+[Segment 1] 104574443, RAM, attempt_201404152256_0018_m_000009_0
+[Segment 2] 104597711, RAM, attempt_201404152256_0018_m_000002_0
+[Segment 3] 104523976, RAM, attempt_201404152256_0018_m_000010_0
+[Segment 4] 104548507, RAM, attempt_201404152256_0018_m_000004_0
+[Segment 5] 104574443, RAM, attempt_201404152256_0018_m_000008_0
+[Segment 6] 104599546, RAM, attempt_201404152256_0018_m_000001_0
+[Segment 7] 104585764, RAM, attempt_201404152256_0018_m_000007_0
+[Segment 8] 104548507, RAM, attempt_201404152256_0018_m_000005_0
+[Segment 9] 104585764, RAM, attempt_201404152256_0018_m_000006_0
+[Segment 10] 104599546, RAM, attempt_201404152256_0018_m_000000_0
+[Segment 11] 104523976, RAM, attempt_201404152256_0018_m_000011_0
+
+-------- MergeInShuffle --------
+[InMemMerge 0] ids [6](3,2,1,10,4,9), records = 9357623 | 9357623, bytes = 627441870 | 627441860
+
+------------ Sort ------------
+[InMemSortMerge] num = 1, records = 1559636, bytes = 104585760 | 104585760
+[MixSortMerge] InMemSegsNum = 0, InMemSegsBytes = 0, OnDiskSegsNum = 2, OnDiskSegsBytes = 732027628
+[FinalSortMerge] InMemSegsNum = 5, InMemSegsBytes = 522832216
+[SegsInReduceBuffer] 7,5,0,8,11
+
+------------ Counters ------------
+[FILE_BYTES_READ]        112943104
+[HDFS_BYTES_WRITTEN]     -1
+[FILE_BYTES_WRITTEN]     732087950
+
+[Reduce shuffle bytes]   1254859894
+[Reduce input groups]    1
+[Reduce input records]   6364863
+[Reduce output records]  0
+
+[Combine input records]  0
+[Combine output records] 0
+
+------------ JvmUsage ------------
+[Space] Used | Committed | Total
+[Heap] 1244 | 1352 | 1500
+[NewGen] 244 | 352 | 500
+[OldGen] 1000 | 1000 | 1000
+
+------------ HeapDumps ------------
+[HeapDump] /tmp/redInRecords-1-out-0-group-1-pid-17424.hprof
+[HeapDump] /tmp/redInRecords-1068023-out-0-group-1-pid-17424.hprof
+[HeapDump] /tmp/redInRecords-2136045-out-0-group-1-pid-17424.hprof
+[HeapDump] /tmp/redInRecords-3204067-out-0-group-1-pid-17424.hprof
+[HeapDump] /tmp/redInRecords-4272089-out-0-group-1-pid-17424.hprof
+[HeapDump] /tmp/redInRecords-5340115-out-0-group-1-pid-17424.hprof
+[HeapDump] /tmp/redInRecords-5340116-out-0-group-1-pid-17424.hprof
+

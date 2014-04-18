@@ -1,0 +1,58 @@
+## Mapper
+------------ RunningStatus ------------
+[taskId] slave5/attempt_201404152256_0001_m_000002_0
+[RunningPhase] spill
+[is map() running] false
+
+------------ InputSplit ------------
+[InputSplit] 536,870,912 B
+
+------------ SpillBuffer ------------
+kvbuffer = 402653184 | 503316480, kvoffsets = 6291456 | 7864320
+
+----- Spills without combine --------
+[Spill 0] records = 4902718 | -1, bytes = 402653117 | -1
+
+------------ Merge ------------
+
+------------ Counters ------------
+[FILE_BYTES_READ]    -1
+[HDFS_BYTES_READ]    362377587
+[FILE_BYTES_WRITTEN] 145409981
+
+[Map input records]  6128490
+[Map output records] 6128489
+[Map output bytes]   503316368
+
+[Combine input records]  3288321
+[Combine output records] 263
+
+------------ JvmUsage ------------
+[Space] Used | Committed | Total
+[Heap] 866 | 958 | 1000
+[NewGen] 200 | 291 | 333
+[OldGen] 666 | 666 | 666
+
+------------ HeapDumps ------------
+[HeapDump] /tmp/mapInRecords-612849-out-612848-pid-6663.hprof
+[HeapDump] /tmp/mapInRecords-1225697-out-1225696-pid-6663.hprof
+[HeapDump] /tmp/mapInRecords-1838545-out-1838544-pid-6663.hprof
+[HeapDump] /tmp/mapInRecords-2451393-out-2451392-pid-6663.hprof
+[HeapDump] /tmp/mapInRecords-3064241-out-3064240-pid-6663.hprof
+[HeapDump] /tmp/mapInRecords-3677089-out-3677088-pid-6663.hprof
+[HeapDump] /tmp/mapInRecords-4289937-out-4289936-pid-6663.hprof
+[HeapDump] /tmp/mapInRecords-4902785-out-4902784-pid-6663.hprof
+[HeapDump] /tmp/mapInRecords-5515633-out-5515632-pid-6663.hprof
+[HeapDump] /tmp/mapInRecords-6128490-out-6128489-pid-6663.hprof
+[HeapDump] /tmp/mCombInRecords-2540390-out-262-pid-6663.hprof
+[HeapDump] /tmp/mCombInRecords-2615183-out-262-pid-6663.hprof
+[HeapDump] /tmp/mCombInRecords-2689976-out-262-pid-6663.hprof
+[HeapDump] /tmp/mCombInRecords-2764769-out-262-pid-6663.hprof
+[HeapDump] /tmp/mCombInRecords-2839562-out-262-pid-6663.hprof
+[HeapDump] /tmp/mCombInRecords-2914355-out-262-pid-6663.hprof
+[HeapDump] /tmp/mCombInRecords-2989148-out-262-pid-6663.hprof
+[HeapDump] /tmp/mCombInRecords-3063941-out-262-pid-6663.hprof
+[HeapDump] /tmp/mCombInRecords-3138734-out-262-pid-6663.hprof
+[HeapDump] /tmp/mCombInRecords-3213527-out-262-pid-6663.hprof
+[HeapDump] /tmp/mCombInRecords-3288320-out-262-pid-6663.hprof
+

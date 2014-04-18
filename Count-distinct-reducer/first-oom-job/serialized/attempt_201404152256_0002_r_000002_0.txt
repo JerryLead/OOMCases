@@ -1,0 +1,58 @@
+## Reducer
+------------ RunningStatus ------------
+[taskId] slave1/attempt_201404152256_0002_r_000002_0
+[RunningPhase] shuffle
+[isInMemMergeRunning] true
+
+------------ ShuffleBuffer ------------
+[ShuffleBound] 1006 MB
+
+------------ Shuffle ------------
+[Segment 0] 21822895, RAM, attempt_201404152256_0002_m_000021_0
+[Segment 1] 23717443, RAM, attempt_201404152256_0002_m_000020_0
+[Segment 2] 22601466, RAM, attempt_201404152256_0002_m_000019_0
+[Segment 3] 28400601, RAM, attempt_201404152256_0002_m_000018_0
+[Segment 4] 45743081, RAM, attempt_201404152256_0002_m_000014_0
+[Segment 5] 45684862, RAM, attempt_201404152256_0002_m_000005_0
+[Segment 6] 45666666, RAM, attempt_201404152256_0002_m_000007_0
+[Segment 7] 45672011, RAM, attempt_201404152256_0002_m_000009_0
+[Segment 8] 45684668, RAM, attempt_201404152256_0002_m_000004_0
+[Segment 9] 45608893, RAM, attempt_201404152256_0002_m_000013_0
+[Segment 10] 45663257, RAM, attempt_201404152256_0002_m_000017_0
+[Segment 11] 45691082, RAM, attempt_201404152256_0002_m_000001_0
+[Segment 12] 45679020, RAM, attempt_201404152256_0002_m_000002_0
+[Segment 13] 45684988, RAM, attempt_201404152256_0002_m_000000_0
+[Segment 14] 45691027, RAM, attempt_201404152256_0002_m_000008_0
+[Segment 15] 45691584, RAM, attempt_201404152256_0002_m_000006_0
+[Segment 16] 45600256, RAM, attempt_201404152256_0002_m_000015_0
+[Segment 17] 45756788, RAM, attempt_201404152256_0002_m_000003_0
+[Segment 18] 45744910, RAM, attempt_201404152256_0002_m_000010_0
+[Segment 19] 45650358, RAM, attempt_201404152256_0002_m_000011_0
+[Segment 20] 45751460, RAM, attempt_201404152256_0002_m_000012_0
+
+-------- MergeInShuffle --------
+[InMemMerge 0] ids [0](21,20,19,18,14,5,4,1,17,7,9,0,8,6,15,2,10,11), records = 0 | 0, bytes = 0 | 0
+
+------------ Sort ------------
+
+------------ Counters ------------
+[FILE_BYTES_READ]        -1
+[HDFS_BYTES_WRITTEN]     -1
+[FILE_BYTES_WRITTEN]     228524
+
+[Reduce shuffle bytes]   827455856
+[Reduce input groups]    0
+[Reduce input records]   0
+[Reduce output records]  0
+
+[Combine input records]  21
+[Combine output records] 1
+
+------------ JvmUsage ------------
+[Space] Used | Committed | Total
+[Heap] 1007 | 1437 | 1500
+[NewGen] 146 | 437 | 500
+[OldGen] 861 | 1000 | 1000
+
+------------ HeapDumps ------------
+

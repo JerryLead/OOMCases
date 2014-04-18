@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)http://master:50030/taskdetails.jsp?tipid=task_201404152256_0003_r_000002 -->
+<html><script type="text/javascript" src="chrome-extension://khbjahpecnkenngkidhioicnfpakihgo/iframe_raw.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="./Hadoop Task Details_files/hadoop.css">
+  <title>Hadoop Task Details</title>
+<style type="text/css"></style></head>
+<body>
+<h1>Job <a href="http://master:50030/jobdetails.jsp?jobid=job_201404152256_0003">job_201404152256_0003</a></h1>
+
+<hr>
+
+<h2>All Task Attempts</h2>
+<center>
+
+<table border="2" cellpadding="5" cellspacing="2">
+<tbody><tr><td align="center">Task Attempts</td><td>Machine</td><td>Status</td><td>Progress</td><td>Start Time</td> 
+  
+<td>Shuffle Finished</td><td>Sort Finished</td>
+  
+<td>Finish Time</td><td>Errors</td><td>Task Logs</td><td>Counters</td><td>Actions</td></tr>
+  <tr><td><a href="http://slave6:50060/taskPerf.jsp?jobid=job_201404152256_0003&taskid=attempt_201404152256_0003_r_000002_0">attempt_201404152256_0003_r_000002_0</a></td><td>Task attempt: <a href="http://slave6:50060/">/default-rack/slave6</a><br>Cleanup Attempt: <a href="http://slave6:50060/">/default-rack/slave6</a></td><td>FAILED</td><td>100.00%<table border="1px" width="80px"><tbody><tr><td cellspacing="0" class="perc_filled" width="100%"></td></tr></tbody></table></td><td>16-Apr-2014 15:30:45</td><td>16-Apr-2014 15:33:01 (2mins, 15sec)</td><td>16-Apr-2014 15:33:01 (0sec)</td>
+<td>16-Apr-2014 15:33:04 (2mins, 18sec)</td>
+<td><pre>Error: java.lang.OutOfMemoryError: Java heap space
+	at java.util.Arrays.copyOf(Arrays.java:2786)
+	at java.io.ByteArrayOutputStream.write(ByteArrayOutputStream.java:94)
+	at java.io.DataOutputStream.write(DataOutputStream.java:90)
+	at java.io.FilterOutputStream.write(FilterOutputStream.java:80)
+	at org.apache.pig.data.BinInterSedes.writeDatum(BinInterSedes.java:442)
+	at org.apache.pig.data.BinInterSedes.writeTuple(BinInterSedes.java:542)
+	at org.apache.pig.data.BinInterSedes.writeBag(BinInterSedes.java:523)
+	at org.apache.pig.data.BinInterSedes.writeDatum(BinInterSedes.java:361)
+	at org.apache.pig.data.BinInterSedes.writeTuple(BinInterSedes.java:542)
+	at org.apache.pig.data.BinInterSedes.writeDatum(BinInterSedes.java:357)
+	at org.apache.pig.data.BinInterSedes.writeTuple(BinInterSedes.java:542)
+	at org.apache.pig.data.BinInterSedes.writeDatum(BinInterSedes.java:357)
+	at org.apache.pig.data.BinSedesTuple.write(BinSedesTuple.java:57)
+	at org.apache.pig.impl.io.PigNullableWritable.write(PigNullableWritable.java:123)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:90)
+	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(WritableSerialization.java:77)
+	at org.apache.hadoop.mapred.IFile$Writer.append(IFile.java:180)
+	at org.apache.hadoop.mapred.Task$CombineOutputCollector.collect(Task.java:1305)
+	at org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter.write(Task.java:1695)
+	at org.apache.hadoop.mapreduce.TaskInputOutputContext.write(TaskInputOutputContext.java:80)
+	at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine.processOnePackageOutput(PigCombiner.java:200)
+	at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine.reduce(PigCombiner.java:162)
+	at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine.reduce(PigCombiner.java:51)
+	at org.apache.hadoop.mapreduce.Reducer.run(Reducer.java:224)
+	at org.apache.hadoop.mapred.Task$NewCombinerRunner.combine(Task.java:1716)
+	at org.apache.hadoop.mapred.ReduceTask$ReduceCopier$InMemFSMergeThread.doInMemMerge(ReduceTask.java:3056)
+	at org.apache.hadoop.mapred.ReduceTask$ReduceCopier$InMemFSMergeThread.run(ReduceTask.java:2963)
+</pre></td><td>Task attempt: <br><a href="http://slave6:50060/tasklog?attemptid=attempt_201404152256_0003_r_000002_0&start=-4097">Last 4KB</a><br><a href="http://slave6:50060/tasklog?attemptid=attempt_201404152256_0003_r_000002_0&start=-8193">Last 8KB</a><br><a href="http://slave6:50060/tasklog?attemptid=attempt_201404152256_0003_r_000002_0&all=true">All</a><br>Cleanup attempt: <br><a href="http://slave6:50060/tasklog?attemptid=attempt_201404152256_0003_r_000002_0&start=-4097&cleanup=true">Last 4KB</a><br><a href="http://slave6:50060/tasklog?attemptid=attempt_201404152256_0003_r_000002_0&start=-8193&cleanup=true">Last 8KB</a><br><a href="http://slave6:50060/tasklog?attemptid=attempt_201404152256_0003_r_000002_0&all=true&cleanup=true">All</a><br></td><td><a href="http://master:50030/taskstats.jsp?attemptid=attempt_201404152256_0003_r_000002_0">15</a></td><td><pre>&nbsp;</pre></td></tr>
+
+</tbody></table>
+</center>
+
+
+
+<hr>
+<a href="http://master:50030/jobdetails.jsp?jobid=job_201404152256_0003">Go back to the job</a><br>
+<a href="http://master:50030/jobtracker.jsp">Go back to JobTracker</a><br>
+<hr>
+This is <a href="http://hadoop.apache.org/">Apache Hadoop</a> release 1.2.1-SNAPSHOT
+
+
+
+</body></html>
