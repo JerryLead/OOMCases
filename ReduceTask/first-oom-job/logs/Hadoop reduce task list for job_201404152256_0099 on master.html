@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)http://master:50030/jobtasks.jsp?jobid=job_201404152256_0099&type=reduce&pagenum=1 -->
+<html><script type="text/javascript" src="chrome-extension://khbjahpecnkenngkidhioicnfpakihgo/iframe_raw.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Hadoop reduce task list for job_201404152256_0099 on master</title>
+    <link rel="stylesheet" type="text/css" href="./Hadoop reduce task list for job_201404152256_0099 on master_files/hadoop.css">
+  <style type="text/css"></style></head>
+<body>
+<h1>Hadoop reduce task list for 
+<a href="http://master:50030/jobdetails.jsp?jobid=job_201404152256_0099">job_201404152256_0099</a> on 
+<a href="http://master:50030/jobtracker.jsp">master</a></h1>
+<hr><h2>All Tasks</h2><center><table border="2" cellpadding="5" cellspacing="2"><tbody><tr><td align="center">Task</td><td>Complete</td><td>Status</td><td>Start Time</td><td>Finish Time</td><td>Errors</td><td>Counters</td></tr><tr><td><a href="http://master:50030/taskdetails.jsp?tipid=task_201404152256_0099_r_000000">task_201404152256_0099_r_000000</a></td><td>0.00%<table border="1px" width="80px"><tbody><tr><td cellspacing="0" class="perc_nonfilled" width="100%"></td></tr></tbody></table></td><td><br></td><td>27-Apr-2014 23:00:42<br></td>
+<td>27-Apr-2014 23:01:07 (25sec)<br></td>
+<td><pre>Error: java.lang.OutOfMemoryError: Java heap space
+	at org.apache.hadoop.mapred.ReduceTask$ReduceCopier$MapOutputCopier.shuffleInMemory(ReduceTask.java:1787)
+	at org.apache.hadoop.mapred.ReduceTask$ReduceCopier$MapOutputCopier.getMapOutput(ReduceTask.java:1647)
+	at org.apache.hadoop.mapred.ReduceTask$ReduceCopier$MapOutputCopier.copyOutput(ReduceTask.java:1480)
+	at org.apache.hadoop.mapred.ReduceTask$ReduceCopier$MapOutputCopier.run(ReduceTask.java:1412)
+
+</pre><br></td>
+<td><a href="http://master:50030/taskstats.jsp?tipid=task_201404152256_0099_r_000000">0</a></td></tr>
+<tr><td><a href="http://master:50030/taskdetails.jsp?tipid=task_201404152256_0099_r_000001">task_201404152256_0099_r_000001</a></td><td>0.00%<table border="1px" width="80px"><tbody><tr><td cellspacing="0" class="perc_nonfilled" width="100%"></td></tr></tbody></table></td><td><br></td><td>27-Apr-2014 23:00:42<br></td>
+<td>27-Apr-2014 23:03:19 (2mins, 37sec)<br></td>
+<td><pre>java.io.IOException: The temporary job-output directory hdfs://master:9000/user/xulijie/output/ShufflePhaseOOM/_temporary doesn't exist!
+	at org.apache.hadoop.mapred.FileOutputCommitter.getWorkPath(FileOutputCommitter.java:250)
+	at org.apache.hadoop.mapred.FileOutputFormat.getTaskOutputPath(FileOutputFormat.java:244)
+	at org.apache.hadoop.mapred.TextOutputFormat.getRecordWriter(TextOutputFormat.java:116)
+	at org.apache.hadoop.mapred.ReduceTask$OldTrackingRecordWriter.&lt;init&gt;(ReduceTask.java:494)
+	at org.apache.hadoop.mapred.ReduceTask.runOldReducer(ReduceTask.java:536)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:465)
+	at org.apache.hadoop.mapred.Child$7.run(Child.java:410)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.mapred.Child.main(Child.java:404)
+
+</pre><br></td>
+<td><a href="http://master:50030/taskstats.jsp?tipid=task_201404152256_0099_r_000001">0</a></td></tr>
+<tr><td><a href="http://master:50030/taskdetails.jsp?tipid=task_201404152256_0099_r_000002">task_201404152256_0099_r_000002</a></td><td>0.00%<table border="1px" width="80px"><tbody><tr><td cellspacing="0" class="perc_nonfilled" width="100%"></td></tr></tbody></table></td><td><br></td><td>27-Apr-2014 23:00:42<br></td>
+<td>27-Apr-2014 23:03:19 (2mins, 37sec)<br></td>
+<td><pre>java.io.IOException: The temporary job-output directory hdfs://master:9000/user/xulijie/output/ShufflePhaseOOM/_temporary doesn't exist!
+	at org.apache.hadoop.mapred.FileOutputCommitter.getWorkPath(FileOutputCommitter.java:250)
+	at org.apache.hadoop.mapred.FileOutputFormat.getTaskOutputPath(FileOutputFormat.java:244)
+	at org.apache.hadoop.mapred.TextOutputFormat.getRecordWriter(TextOutputFormat.java:116)
+	at org.apache.hadoop.mapred.ReduceTask$OldTrackingRecordWriter.&lt;init&gt;(ReduceTask.java:494)
+	at org.apache.hadoop.mapred.ReduceTask.runOldReducer(ReduceTask.java:536)
+	at org.apache.hadoop.mapred.ReduceTask.run(ReduceTask.java:465)
+	at org.apache.hadoop.mapred.Child$7.run(Child.java:410)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.mapred.Child.main(Child.java:404)
+
+</pre><br></td>
+<td><a href="http://master:50030/taskstats.jsp?tipid=task_201404152256_0099_r_000002">0</a></td></tr>
+</tbody></table></center>
+
+<hr>
+<a href="http://master:50030/jobtracker.jsp">Go back to JobTracker</a><br>
+<hr>
+This is <a href="http://hadoop.apache.org/">Apache Hadoop</a> release 1.2.1-SNAPSHOT
+
+
+
+</body></html>

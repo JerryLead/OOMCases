@@ -1,0 +1,1 @@
+root@master:/opt/hadoop-1.2.0-pro# hadoop jar hadoop-examples-1.2.0.jar grep /freeData/Wikipedia/txt/ /user/xulijie/output/grep "China"

@@ -1,0 +1,50 @@
+
+<!-- saved from url=(0083)http://slave8:50060/tasklog?attemptid=attempt_201404152256_0090_m_000000_0&all=true -->
+<html><script type="text/javascript" src="chrome-extension://khbjahpecnkenngkidhioicnfpakihgo/iframe_raw.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Task Logs: 'attempt_201404152256_0090_m_000000_0'</title>
+<style type="text/css"></style></head><body>
+<h1>Task Logs: 'attempt_201404152256_0090_m_000000_0'</h1><br>
+<br><b><u>stdout logs</u></b><br>
+<pre>0.993: [GC [PSYoungGen: 37310K-&gt;1184K(74816K)] 37310K-&gt;1184K(620992K), 0.0163790 secs] [Times: user=0.02 sys=0.00, real=0.02 secs] 
+1.009: [GC [PSYoungGen: 1184K-&gt;1136K(138944K)] 1184K-&gt;1136K(685120K), 0.0204220 secs] [Times: user=0.03 sys=0.00, real=0.02 secs] 
+1.030: [Full GC [PSYoungGen: 1136K-&gt;0K(138944K)] [PSOldGen: 0K-&gt;1101K(68480K)] 1136K-&gt;1101K(207424K) [PSPermGen: 12076K-&gt;12076K(24448K)], 0.0279540 secs] [Times: user=0.02 sys=0.00, real=0.03 secs] 
+1.059: [GC [PSYoungGen: 0K-&gt;0K(138944K)] 1101K-&gt;1101K(685120K), 0.0249190 secs] [Times: user=0.02 sys=0.00, real=0.03 secs] 
+1.084: [Full GC [PSYoungGen: 0K-&gt;0K(138944K)] [PSOldGen: 1101K-&gt;975K(93440K)] 1101K-&gt;975K(232384K) [PSPermGen: 12076K-&gt;12054K(27200K)], 0.0328760 secs] [Times: user=0.03 sys=0.00, real=0.03 secs] 
+java.lang.OutOfMemoryError: Java heap space
+Dumping heap to /tmp/java_pid29090.hprof ...
+Heap dump file created [3862277 bytes in 0.046 secs]
+Heap
+ PSYoungGen      total 138944K, used 23010K [0x00000000ef560000, 0x00000000ffe70000, 0x0000000100000000)
+  eden space 128256K, 17% used [0x00000000ef560000,0x00000000f0bd8988,0x00000000f72a0000)
+  from space 10688K, 0% used [0x00000000f72a0000,0x00000000f72a0000,0x00000000f7d10000)
+  to   space 10688K, 0% used [0x00000000ff400000,0x00000000ff400000,0x00000000ffe70000)
+ PSOldGen        total 546176K, used 975K [0x00000000ce000000, 0x00000000ef560000, 0x00000000ef560000)
+  object space 546176K, 0% used [0x00000000ce000000,0x00000000ce0f3d50,0x00000000ef560000)
+ PSPermGen       total 27200K, used 13355K [0x00000000c8e00000, 0x00000000ca890000, 0x00000000ce000000)
+  object space 27200K, 49% used [0x00000000c8e00000,0x00000000c9b0ad80,0x00000000ca890000)
+</pre><hr><br>
+<br><b><u>stderr logs</u></b><br>
+<pre></pre><hr><br>
+<br><b><u>syslog logs</u></b><br>
+<pre>2014-04-27 21:50:19,617 INFO org.apache.hadoop.util.NativeCodeLoader: Loaded the native-hadoop library
+2014-04-27 21:50:19,859 INFO org.apache.hadoop.util.ProcessTree: setsid exited with exit code 0
+2014-04-27 21:50:19,864 INFO org.apache.hadoop.mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@12d56b37
+2014-04-27 21:50:19,950 INFO org.apache.hadoop.mapred.MapTask: Processing split: 268435456
+2014-04-27 21:50:19,962 WARN org.apache.hadoop.io.compress.snappy.LoadSnappy: Snappy native library not loaded
+2014-04-27 21:50:19,967 INFO org.apache.hadoop.mapred.MapTask: numReduceTasks: 1
+2014-04-27 21:50:19,973 INFO org.apache.hadoop.mapred.MapTask: io.sort.mb = 600
+2014-04-27 21:50:20,191 INFO org.apache.hadoop.mapred.TaskLogsTruncater: Initializing logs' truncater with mapRetainSize=-1 and reduceRetainSize=-1
+2014-04-27 21:50:20,245 INFO org.apache.hadoop.io.nativeio.NativeIO: Initialized cache for UID to User mapping with a cache timeout of 14400 seconds.
+2014-04-27 21:50:20,245 INFO org.apache.hadoop.io.nativeio.NativeIO: Got UserName root for UID 0 from the native implementation
+2014-04-27 21:50:20,247 FATAL org.apache.hadoop.mapred.Child: Error running child : java.lang.OutOfMemoryError: Java heap space
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.&lt;init&gt;(MapTask.java:981)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:422)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:366)
+	at org.apache.hadoop.mapred.Child$7.run(Child.java:410)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.mapred.Child.main(Child.java:404)
+
+</pre><hr><br>
+
+</body></html>

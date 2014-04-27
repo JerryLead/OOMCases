@@ -1,0 +1,41 @@
+## Mapper
+------------ RunningStatus ------------
+[taskId] slave8/attempt_201404152256_0087_m_000000_0
+[RunningPhase] map
+[is map() running] false
+
+------------ InputSplit ------------
+[InputSplit] 536,870,912 B
+
+------------ SpillBuffer ------------
+kvbuffer = 318767104 | 398458880, kvoffsets = 1048576 | 1310720
+
+----- Spills without combine --------
+
+------------ Merge ------------
+
+------------ Counters ------------
+[FILE_BYTES_READ]    -1
+[HDFS_BYTES_READ]    166592638
+[FILE_BYTES_WRITTEN] 59368
+
+[Map input records]  9651
+[Map output records] 0
+[Map output bytes]   0
+
+[Combine input records]  0
+[Combine output records] 0
+
+------------ JvmUsage ------------
+[Space] Used | Committed | Total
+[Heap] 813 | 898 | 1000
+[NewGen] 146 | 231 | 333
+[OldGen] 666 | 666 | 666
+
+------------ HeapDumps ------------
+[HeapDump] /tmp/mapInRecords-1885-out-0-pid-26746.hprof
+[HeapDump] /tmp/mapInRecords-3769-out-0-pid-26746.hprof
+[HeapDump] /tmp/mapInRecords-5653-out-0-pid-26746.hprof
+[HeapDump] /tmp/mapInRecords-7537-out-0-pid-26746.hprof
+[HeapDump] /tmp/mapInRecords-9425-out-0-pid-26746.hprof
+
