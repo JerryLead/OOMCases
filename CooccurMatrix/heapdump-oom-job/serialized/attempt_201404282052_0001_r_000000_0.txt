@@ -1,0 +1,65 @@
+## Reducer
+------------ RunningStatus ------------
+[taskId] slave9/attempt_201404282052_0001_r_000000_0
+[RunningPhase] reduce
+[isInMemMergeRunning] false
+
+------------ ShuffleBuffer ------------
+[ShuffleBound] 622 MB
+
+------------ Shuffle ------------
+[Segment 0] 168994741, Disk, attempt_201404282052_0001_m_000016_0
+[Segment 1] 221192962, Disk, attempt_201404282052_0001_m_000009_0
+[Segment 2] 220832789, Disk, attempt_201404282052_0001_m_000014_0
+[Segment 3] 220892560, Disk, attempt_201404282052_0001_m_000001_0
+[Segment 4] 204698078, Disk, attempt_201404282052_0001_m_000013_0
+[Segment 5] 218037055, Disk, attempt_201404282052_0001_m_000003_0
+[Segment 6] 221447144, Disk, attempt_201404282052_0001_m_000002_0
+[Segment 7] 225668538, Disk, attempt_201404282052_0001_m_000010_0
+[Segment 8] 230920766, Disk, attempt_201404282052_0001_m_000007_0
+[Segment 9] 230008085, Disk, attempt_201404282052_0001_m_000011_0
+[Segment 10] 230890848, Disk, attempt_201404282052_0001_m_000005_0
+[Segment 11] 228676667, Disk, attempt_201404282052_0001_m_000015_0
+[Segment 12] 226418198, Disk, attempt_201404282052_0001_m_000008_0
+[Segment 13] 229596216, Disk, attempt_201404282052_0001_m_000000_0
+[Segment 14] 229270586, Disk, attempt_201404282052_0001_m_000006_0
+[Segment 15] 230307335, Disk, attempt_201404282052_0001_m_000012_0
+[Segment 16] 225000234, Disk, attempt_201404282052_0001_m_000004_0
+
+-------- MergeInShuffle --------
+
+------------ Sort ------------
+[MixSortMerge] InMemSegsNum = 0, InMemSegsBytes = 0, OnDiskSegsNum = 17, OnDiskSegsBytes = 3762852802
+
+------------ Counters ------------
+[FILE_BYTES_READ]        4516282942
+[HDFS_BYTES_WRITTEN]     1532853714
+[FILE_BYTES_WRITTEN]     5464010946
+
+[Reduce shuffle bytes]   3762852802
+[Reduce input groups]    3897853
+[Reduce input records]   8407750
+[Reduce output records]  3897852
+
+[Combine input records]  0
+[Combine output records] 0
+
+------------ JvmUsage ------------
+[Space] Used | Committed | Total
+[Heap] 534 | 803 | 1000
+[NewGen] 0 | 136 | 333
+[OldGen] 534 | 666 | 666
+
+------------ HeapDumps ------------
+[HeapDump] /tmp/redInGroups-779570-inrec-1457689-outrec-779569-pid-24692.hprof
+[HeapDump] /tmp/redInGroups-1559140-inrec-3091758-outrec-1559139-pid-24692.hprof
+[HeapDump] /tmp/redInGroups-2338710-inrec-4871068-outrec-2338709-pid-24692.hprof
+[HeapDump] /tmp/redInGroups-3118280-inrec-6677476-outrec-3118279-pid-24692.hprof
+[HeapDump] /tmp/redInGroups-3897852-inrec-8407733-outrec-3897851-pid-24692.hprof
+[HeapDump] /tmp/redInRecords-8407734-out-org.apache.hadoop.mapred.Counters$Counter@f38644da-group-3897853-pid-24692.hprof
+[HeapDump] /tmp/redInRecords-8407737-out-org.apache.hadoop.mapred.Counters$Counter@f38644da-group-3897853-pid-24692.hprof
+[HeapDump] /tmp/redInRecords-8407740-out-org.apache.hadoop.mapred.Counters$Counter@f38644da-group-3897853-pid-24692.hprof
+[HeapDump] /tmp/redInRecords-8407743-out-org.apache.hadoop.mapred.Counters$Counter@f38644da-group-3897853-pid-24692.hprof
+[HeapDump] /tmp/redInRecords-8407746-out-org.apache.hadoop.mapred.Counters$Counter@f38644da-group-3897853-pid-24692.hprof
+[HeapDump] /tmp/redInRecords-8407749-out-org.apache.hadoop.mapred.Counters$Counter@f38644da-group-3897853-pid-24692.hprof
+

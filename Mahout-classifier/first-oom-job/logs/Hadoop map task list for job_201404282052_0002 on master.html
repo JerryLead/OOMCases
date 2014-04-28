@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)http://master:50030/jobtasks.jsp?jobid=job_201404282052_0002&type=map&pagenum=1 -->
+<html><script type="text/javascript" src="chrome-extension://khbjahpecnkenngkidhioicnfpakihgo/iframe_raw.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Hadoop map task list for job_201404282052_0002 on master</title>
+    <link rel="stylesheet" type="text/css" href="./Hadoop map task list for job_201404282052_0002 on master_files/hadoop.css">
+  <style type="text/css"></style></head>
+<body>
+<h1>Hadoop map task list for 
+<a href="http://master:50030/jobdetails.jsp?jobid=job_201404282052_0002">job_201404282052_0002</a> on 
+<a href="http://master:50030/jobtracker.jsp">master</a></h1>
+<hr><h2>All Tasks</h2><center><table border="2" cellpadding="5" cellspacing="2"><tbody><tr><td align="center">Task</td><td>Complete</td><td>Status</td><td>Start Time</td><td>Finish Time</td><td>Errors</td><td>Counters</td></tr><tr><td><a href="http://master:50030/taskdetails.jsp?tipid=task_201404282052_0002_m_000000">task_201404282052_0002_m_000000</a></td><td>0.00%<table border="1px" width="80px"><tbody><tr><td cellspacing="0" class="perc_nonfilled" width="100%"></td></tr></tbody></table></td><td><br></td><td>28-Apr-2014 22:05:47<br></td>
+<td>28-Apr-2014 22:08:50 (3mins, 2sec)<br></td>
+<td><pre>java.lang.RuntimeException: Error in configuring object
+	at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:93)
+	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:64)
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:117)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:426)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:366)
+	at org.apache.hadoop.mapred.Child$7.run(Child.java:410)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.mapred.Child.main(Child.java:404)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:88)
+	... 9 more
+Caused by: java.lang.RuntimeException: Error in configuring object
+	at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:93)
+	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:64)
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:117)
+	at org.apache.hadoop.mapred.MapRunner.configure(MapRunner.java:43)
+	... 14 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:88)
+	... 17 more
+Caused by: java.lang.OutOfMemoryError: Java heap space
+	at org.apache.mahout.math.map.OpenIntObjectHashMap.rehash(OpenIntObjectHashMap.java:419)
+	at org.apache.mahout.math.map.OpenIntObjectHashMap.put(OpenIntObjectHashMap.java:384)
+	at org.apache.mahout.math.SparseMatrix.setQuick(SparseMatrix.java:103)
+	at org.apache.mahout.classifier.bayes.InMemoryBayesDatastore.loadFeatureWeight(InMemoryBayesDatastore.java:149)
+	at org.apache.mahout.classifier.bayes.SequenceFileModelReader.loadWeightMatrix(SequenceFileModelReader.java:64)
+	at org.apache.mahout.classifier.bayes.SequenceFileModelReader.loadModel(SequenceFileModelReader.java:50)
+	at org.apache.mahout.classifier.bayes.InMemoryBayesDatastore.initialize(InMemoryBayesDatastore.java:72)
+	at org.apache.mahout.classifier.bayes.ClassifierContext.initialize(ClassifierContext.java:44)
+	at org.apache.mahout.classifier.bayes.mapreduce.bayes.BayesClassifierMapper.configure(BayesClassifierMapper.java:121)
+	... 22 more
+
+</pre><br></td>
+<td><a href="http://master:50030/taskstats.jsp?tipid=task_201404282052_0002_m_000000">0</a></td></tr>
+<tr><td><a href="http://master:50030/taskdetails.jsp?tipid=task_201404282052_0002_m_000001">task_201404282052_0002_m_000001</a></td><td>0.00%<table border="1px" width="80px"><tbody><tr><td cellspacing="0" class="perc_nonfilled" width="100%"></td></tr></tbody></table></td><td><br></td><td>28-Apr-2014 22:05:47<br></td>
+<td>28-Apr-2014 22:08:50 (3mins, 2sec)<br></td>
+<td><pre>java.lang.RuntimeException: Error in configuring object
+	at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:93)
+	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:64)
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:117)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:426)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:366)
+	at org.apache.hadoop.mapred.Child$7.run(Child.java:410)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.mapred.Child.main(Child.java:404)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:88)
+	... 9 more
+Caused by: java.lang.RuntimeException: Error in configuring object
+	at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:93)
+	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:64)
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:117)
+	at org.apache.hadoop.mapred.MapRunner.configure(MapRunner.java:43)
+	... 14 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:88)
+	... 17 more
+Caused by: java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at java.nio.HeapCharBuffer.&lt;init&gt;(HeapCharBuffer.java:39)
+	at java.nio.CharBuffer.allocate(CharBuffer.java:312)
+	at java.nio.charset.CharsetDecoder.decode(CharsetDecoder.java:760)
+	at org.apache.hadoop.io.Text.decode(Text.java:350)
+	at org.apache.hadoop.io.Text.decode(Text.java:327)
+	at org.apache.hadoop.io.Text.toString(Text.java:254)
+	at org.apache.mahout.common.StringTuple.readFields(StringTuple.java:143)
+	at org.apache.hadoop.io.SequenceFile$Reader.next(SequenceFile.java:1898)
+	at org.apache.hadoop.io.SequenceFile$Reader.next(SequenceFile.java:1938)
+	at org.apache.mahout.common.iterator.sequencefile.SequenceFileIterator.computeNext(SequenceFileIterator.java:95)
+	at org.apache.mahout.common.iterator.sequencefile.SequenceFileIterator.computeNext(SequenceFileIterator.java:38)
+	at com.google.common.collect.AbstractIterator.tryToComputeNext(AbstractIterator.java:141)
+	at com.google.common.collect.AbstractIterator.hasNext(AbstractIterator.java:136)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:525)
+	at com.google.common.collect.ForwardingIterator.hasNext(ForwardingIterator.java:43)
+	at org.apache.mahout.classifier.bayes.SequenceFileModelReader.loadWeightMatrix(SequenceFileModelReader.java:56)
+	at org.apache.mahout.classifier.bayes.SequenceFileModelReader.loadModel(SequenceFileModelReader.java:50)
+	at org.apache.mahout.classifier.bayes.InMemoryBayesDatastore.initialize(InMemoryBayesDatastore.java:72)
+	at org.apache.mahout.classifier.bayes.ClassifierContext.initialize(ClassifierContext.java:44)
+	at org.apache.mahout.classifier.bayes.mapreduce.bayes.BayesClassifierMapper.configure(BayesClassifierMapper.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:88)
+	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:64)
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:117)
+	at org.apache.hadoop.mapred.MapRunner.configure(MapRunner.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+
+</pre><br></td>
+<td><a href="http://master:50030/taskstats.jsp?tipid=task_201404282052_0002_m_000001">0</a></td></tr>
+</tbody></table></center>
+
+<hr>
+<a href="http://master:50030/jobtracker.jsp">Go back to JobTracker</a><br>
+<hr>
+This is <a href="http://hadoop.apache.org/">Apache Hadoop</a> release 1.2.1-SNAPSHOT
+
+
+
+</body></html>

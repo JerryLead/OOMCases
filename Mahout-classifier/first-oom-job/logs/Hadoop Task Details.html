@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)http://master:50030/taskdetails.jsp?tipid=task_201404282052_0002_m_000000 -->
+<html><script type="text/javascript" src="chrome-extension://khbjahpecnkenngkidhioicnfpakihgo/iframe_raw.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="./Hadoop Task Details_files/hadoop.css">
+  <title>Hadoop Task Details</title>
+<style type="text/css"></style></head>
+<body>
+<h1>Job <a href="http://master:50030/jobdetails.jsp?jobid=job_201404282052_0002">job_201404282052_0002</a></h1>
+
+<hr>
+
+<h2>All Task Attempts</h2>
+<center>
+
+<table border="2" cellpadding="5" cellspacing="2">
+<tbody><tr><td align="center">Task Attempts</td><td>Machine</td><td>Status</td><td>Progress</td><td>Start Time</td> 
+  
+<td>Finish Time</td><td>Errors</td><td>Task Logs</td><td>Counters</td><td>Actions</td></tr>
+  <tr><td><a href="http://slave9:50060/taskPerf.jsp?jobid=job_201404282052_0002&taskid=attempt_201404282052_0002_m_000000_0">attempt_201404282052_0002_m_000000_0</a></td><td><a href="http://slave9:50060/">/default-rack/slave9</a></td><td>KILLED</td><td>0.00%<table border="1px" width="80px"><tbody><tr><td cellspacing="0" class="perc_nonfilled" width="100%"></td></tr></tbody></table></td><td>28-Apr-2014 22:05:34</td><td>28-Apr-2014 22:08:35 (3mins, 0sec)</td>
+<td><pre>java.lang.RuntimeException: Error in configuring object
+	at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:93)
+	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:64)
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:117)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:426)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:366)
+	at org.apache.hadoop.mapred.Child$7.run(Child.java:410)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1190)
+	at org.apache.hadoop.mapred.Child.main(Child.java:404)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:88)
+	... 9 more
+Caused by: java.lang.RuntimeException: Error in configuring object
+	at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:93)
+	at org.apache.hadoop.util.ReflectionUtils.setConf(ReflectionUtils.java:64)
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:117)
+	at org.apache.hadoop.mapred.MapRunner.configure(MapRunner.java:43)
+	... 14 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.util.ReflectionUtils.setJobConf(ReflectionUtils.java:88)
+	... 17 more
+Caused by: java.lang.OutOfMemoryError: Java heap space
+	at org.apache.mahout.math.map.OpenIntObjectHashMap.rehash(OpenIntObjectHashMap.java:419)
+	at org.apache.mahout.math.map.OpenIntObjectHashMap.put(OpenIntObjectHashMap.java:384)
+	at org.apache.mahout.math.SparseMatrix.setQuick(SparseMatrix.java:103)
+	at org.apache.mahout.classifier.bayes.InMemoryBayesDatastore.loadFeatureWeight(InMemoryBayesDatastore.java:149)
+	at org.apache.mahout.classifier.bayes.SequenceFileModelReader.loadWeightMatrix(SequenceFileModelReader.java:64)
+	at org.apache.mahout.classifier.bayes.SequenceFileModelReader.loadModel(SequenceFileModelReader.java:50)
+	at org.apache.mahout.classifier.bayes.InMemoryBayesDatastore.initialize(InMemoryBayesDatastore.java:72)
+	at org.apache.mahout.classifier.bayes.ClassifierContext.initialize(ClassifierContext.java:44)
+	at org.apache.mahout.classifier.bayes.mapreduce.bayes.BayesClassifierMapper.configure(BayesClassifierMapper.java:121)
+	... 22 more
+</pre></td><td><a href="http://slave9:50060/tasklog?attemptid=attempt_201404282052_0002_m_000000_0&start=-4097">Last 4KB</a><br><a href="http://slave9:50060/tasklog?attemptid=attempt_201404282052_0002_m_000000_0&start=-8193">Last 8KB</a><br><a href="http://slave9:50060/tasklog?attemptid=attempt_201404282052_0002_m_000000_0&all=true">All</a><br></td><td><a href="http://master:50030/taskstats.jsp?attemptid=attempt_201404282052_0002_m_000000_0">16</a></td><td><pre>&nbsp;</pre></td></tr>
+
+</tbody></table>
+</center>
+
+
+<h3>Input Split Locations</h3>
+<table border="2" cellpadding="5" cellspacing="2">
+<tbody><tr><td>/default-rack/slave4</td></tr>
+<tr><td>/default-rack/slave6</td></tr>
+
+</tbody></table>
+
+
+<hr>
+<a href="http://master:50030/jobdetails.jsp?jobid=job_201404282052_0002">Go back to the job</a><br>
+<a href="http://master:50030/jobtracker.jsp">Go back to JobTracker</a><br>
+<hr>
+This is <a href="http://hadoop.apache.org/">Apache Hadoop</a> release 1.2.1-SNAPSHOT
+
+
+
+</body></html>

@@ -1,0 +1,54 @@
+## Reducer
+------------ RunningStatus ------------
+[taskId] slave9/attempt_201404281552_0001_r_000000_0
+[RunningPhase] reduce
+[isInMemMergeRunning] false
+
+------------ ShuffleBuffer ------------
+[ShuffleBound] 622 MB
+
+------------ Shuffle ------------
+[Segment 0] 168994741, Disk, attempt_201404281552_0001_m_000016_0
+[Segment 1] 220832789, Disk, attempt_201404281552_0001_m_000014_0
+[Segment 2] 221192962, Disk, attempt_201404281552_0001_m_000009_0
+[Segment 3] 204698078, Disk, attempt_201404281552_0001_m_000013_0
+[Segment 4] 221447144, Disk, attempt_201404281552_0001_m_000002_0
+[Segment 5] 229596216, Disk, attempt_201404281552_0001_m_000000_0
+[Segment 6] 218037055, Disk, attempt_201404281552_0001_m_000003_0
+[Segment 7] 226418198, Disk, attempt_201404281552_0001_m_000008_0
+[Segment 8] 230008085, Disk, attempt_201404281552_0001_m_000011_0
+[Segment 9] 225668538, Disk, attempt_201404281552_0001_m_000010_0
+[Segment 10] 230920766, Disk, attempt_201404281552_0001_m_000007_0
+[Segment 11] 230890848, Disk, attempt_201404281552_0001_m_000005_0
+[Segment 12] 220892560, Disk, attempt_201404281552_0001_m_000001_0
+[Segment 13] 228676667, Disk, attempt_201404281552_0001_m_000015_0
+[Segment 14] 225000234, Disk, attempt_201404281552_0001_m_000004_0
+[Segment 15] 229270586, Disk, attempt_201404281552_0001_m_000006_0
+[Segment 16] 230307335, Disk, attempt_201404281552_0001_m_000012_0
+
+-------- MergeInShuffle --------
+
+------------ Sort ------------
+[MixSortMerge] InMemSegsNum = 0, InMemSegsBytes = 0, OnDiskSegsNum = 17, OnDiskSegsBytes = 3762852802
+
+------------ Counters ------------
+[FILE_BYTES_READ]        4516282942
+[HDFS_BYTES_WRITTEN]     1532853714
+[FILE_BYTES_WRITTEN]     5464010304
+
+[Reduce shuffle bytes]   3762852802
+[Reduce input groups]    3897853
+[Reduce input records]   8407750
+[Reduce output records]  3897852
+
+[Combine input records]  0
+[Combine output records] 0
+
+------------ JvmUsage ------------
+[Space] Used | Committed | Total
+[Heap] 552 | 785 | 1000
+[NewGen] 0 | 119 | 333
+[OldGen] 552 | 666 | 666
+
+------------ HeapDumps ------------
+
