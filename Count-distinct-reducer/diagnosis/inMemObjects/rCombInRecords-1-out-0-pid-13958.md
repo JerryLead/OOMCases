@@ -56,7 +56,55 @@
 
 | User object | shallow heap | retained heap | length | inner object | inner size | threads | code() |
 |:------------| ------------:| -------------:| ------:|:------------ | ----------:| :------ | :------|
-| org.apache.pig.data.DefaultDataBag @ 0xd4d23120 | 40 | 37,234,256 | 1 |  | |  |  |
+| org.apache.pig.data.DefaultDataBag @ 0xd4d23120 | 40 | 37,234,256 | 1 |  | | Thread for merging in memory files | combine |
 
 ### User objects => Threads and code() 
+
+[org.apache.pig.data.DefaultDataBag @ 0xd4d23120] =>
+
+	|------ in combine() in Thread for merging in memory files ------|
+	at org.apache.hadoop.mapred.Task$NewCombinerRunner.combine(Lorg/apache/hadoop/mapred/RawKeyValueIterator;Lorg/apache/hadoop/mapred/OutputCollector;)V (Task.java:1716)
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd2139c40 [597379]
+		org.apache.pig.impl.io.NullableTuple @ 0xd4d22ff8 [601912]
+		org.apache.pig.data.BinSedesTuple @ 0xd4d23010 [601913]
+		java.util.ArrayList @ 0xd4d23028 [601914]
+		java.lang.Object[10] @ 0xd4d23040 [601915]
+		org.apache.pig.data.BinSedesTuple @ 0xd4d230d8 [601920]
+		java.util.ArrayList @ 0xd4d230f0 [601921]
+		java.lang.Object[1] @ 0xd4d23108 [601922]
+		org.apache.pig.data.DefaultDataBag @ 0xd4d23120 [601923]
+
+	at org.apache.hadoop.mapreduce.Reducer.run(Lorg/apache/hadoop/mapreduce/Reducer$Context;)V (Reducer.java:223)
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd2139c40 [597379]
+		org.apache.pig.impl.io.NullableTuple @ 0xd4d22ff8 [601912]
+		org.apache.pig.data.BinSedesTuple @ 0xd4d23010 [601913]
+		java.util.ArrayList @ 0xd4d23028 [601914]
+		java.lang.Object[10] @ 0xd4d23040 [601915]
+		org.apache.pig.data.BinSedesTuple @ 0xd4d230d8 [601920]
+		java.util.ArrayList @ 0xd4d230f0 [601921]
+		java.lang.Object[1] @ 0xd4d23108 [601922]
+		org.apache.pig.data.DefaultDataBag @ 0xd4d23120 [601923]
+
+	at org.apache.hadoop.mapreduce.ReduceContext.nextKey()Z (ReduceContext.java:154)
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd2139c40 [597379]
+		org.apache.pig.impl.io.NullableTuple @ 0xd4d22ff8 [601912]
+		org.apache.pig.data.BinSedesTuple @ 0xd4d23010 [601913]
+		java.util.ArrayList @ 0xd4d23028 [601914]
+		java.lang.Object[10] @ 0xd4d23040 [601915]
+		org.apache.pig.data.BinSedesTuple @ 0xd4d230d8 [601920]
+		java.util.ArrayList @ 0xd4d230f0 [601921]
+		java.lang.Object[1] @ 0xd4d23108 [601922]
+		org.apache.pig.data.DefaultDataBag @ 0xd4d23120 [601923]
+
+	at org.apache.hadoop.mapreduce.ReduceContext.nextKeyValue()Z (ReduceContext.java:208)
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd2139c40 [597379]
+		org.apache.pig.impl.io.NullableTuple @ 0xd4d22ff8 [601912]
+		org.apache.pig.data.BinSedesTuple @ 0xd4d23010 [601913]
+		java.util.ArrayList @ 0xd4d23028 [601914]
+		java.lang.Object[10] @ 0xd4d23040 [601915]
+		org.apache.pig.data.BinSedesTuple @ 0xd4d230d8 [601920]
+		java.util.ArrayList @ 0xd4d230f0 [601921]
+		java.lang.Object[1] @ 0xd4d23108 [601922]
+		org.apache.pig.data.DefaultDataBag @ 0xd4d23120 [601923]
+
 

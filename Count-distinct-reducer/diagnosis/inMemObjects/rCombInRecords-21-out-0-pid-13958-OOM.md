@@ -58,22 +58,241 @@
 |:------------| ------------:| -------------:| ------:|:------------ | ----------:| :------ | :------|
 | byte[157286400] @ 0xe0c00000 | 157,286,416 | 157,286,416 | 1 |  | | Thread for merging in memory files | combine |
 | org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 | 48 | 24,271,976 | 1 |  | | Thread for merging in memory files | combine |
-| org.apache.pig.data.DefaultDataBag @ 0xd4169e10 | 40 | 4,021,312 | 1 |  | |  |  |
-| org.apache.pig.data.DefaultDataBag @ 0xd70d6cb0 | 40 | 4,021,312 | 1 |  | |  |  |
+| org.apache.pig.data.DefaultDataBag @ 0xd4169e10 | 40 | 4,021,312 | 1 |  | | Thread for merging in memory files | combine |
+| org.apache.pig.data.DefaultDataBag @ 0xd70d6cb0 | 40 | 4,021,312 | 1 |  | | Thread for merging in memory files | combine |
 
 ### User objects => Threads and code() 
 
 [org.apache.pig.data.InternalDistinctBag @ 0xd74acab0] =>
 
 	|------ in combine() in Thread for merging in memory files ------|
-	at org.apache.pig.data.BinInterSedes.writeTuple(Ljava/io/DataOutput;Lorg/apache/pig/data/Tuple;)V (BinInterSedes.java:542)
+	at org.apache.hadoop.mapred.Task$NewCombinerRunner.combine(Lorg/apache/hadoop/mapred/RawKeyValueIterator;Lorg/apache/hadoop/mapred/OutputCollector;)V (Task.java:1716)
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POLocalRearrange @ 0xd0f60bd0 [35452]
+		java.util.ArrayList @ 0xd0f60c50 [35454]
+		java.lang.Object[10] @ 0xd0f60c68 [35455]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xdb6e06b0 [726051]
 		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
 		java.util.ArrayList @ 0xdb6e0620 [726045]
 		java.lang.Object[1] @ 0xdb6e0638 [726046]
 		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
 
-	at org.apache.pig.data.BinInterSedes.writeDatum(Ljava/io/DataOutput;Ljava/lang/Object;)V (BinInterSedes.java:361)
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POLocalRearrange @ 0xd0f60bd0 [35452]
+		java.util.ArrayList @ 0xd0f60c50 [35454]
+		java.lang.Object[10] @ 0xd0f60c68 [35455]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xd74ac9f8 [38657]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
 		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator[1] @ 0xd0f61ac0 [35539]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xdb6e06b0 [726051]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
+		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator[1] @ 0xd0f61ac0 [35539]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xd74ac9f8 [38657]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
+		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.plans.PhysicalPlan @ 0xd0f5a750 [34963]
+		java.util.ArrayList @ 0xd0f61790 [35518]
+		java.lang.Object[10] @ 0xd0f617a8 [35519]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xdb6e06b0 [726051]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
+		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.plans.PhysicalPlan @ 0xd0f5a750 [34963]
+		java.util.ArrayList @ 0xd0f61790 [35518]
+		java.lang.Object[10] @ 0xd0f617a8 [35519]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xd74ac9f8 [38657]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
+		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+	at org.apache.hadoop.mapreduce.Reducer.run(Lorg/apache/hadoop/mapreduce/Reducer$Context;)V (Reducer.java:224)
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POLocalRearrange @ 0xd0f60bd0 [35452]
+		java.util.ArrayList @ 0xd0f60c50 [35454]
+		java.lang.Object[10] @ 0xd0f60c68 [35455]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xdb6e06b0 [726051]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
+		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POLocalRearrange @ 0xd0f60bd0 [35452]
+		java.util.ArrayList @ 0xd0f60c50 [35454]
+		java.lang.Object[10] @ 0xd0f60c68 [35455]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xd74ac9f8 [38657]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
+		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator[1] @ 0xd0f61ac0 [35539]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xdb6e06b0 [726051]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
+		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator[1] @ 0xd0f61ac0 [35539]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xd74ac9f8 [38657]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
+		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.plans.PhysicalPlan @ 0xd0f5a750 [34963]
+		java.util.ArrayList @ 0xd0f61790 [35518]
+		java.lang.Object[10] @ 0xd0f617a8 [35519]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xdb6e06b0 [726051]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
+		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.plans.PhysicalPlan @ 0xd0f5a750 [34963]
+		java.util.ArrayList @ 0xd0f61790 [35518]
+		java.lang.Object[10] @ 0xd0f617a8 [35519]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xd74ac9f8 [38657]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
+		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+	at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine.reduce(Ljava/lang/Object;Ljava/lang/Iterable;Lorg/apache/hadoop/mapreduce/Reducer$Context;)V (PigCombiner.java:51)
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POLocalRearrange @ 0xd0f60bd0 [35452]
+		java.util.ArrayList @ 0xd0f60c50 [35454]
+		java.lang.Object[10] @ 0xd0f60c68 [35455]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xdb6e06b0 [726051]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
+		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POLocalRearrange @ 0xd0f60bd0 [35452]
+		java.util.ArrayList @ 0xd0f60c50 [35454]
+		java.lang.Object[10] @ 0xd0f60c68 [35455]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xd74ac9f8 [38657]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
+		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator[1] @ 0xd0f61ac0 [35539]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xdb6e06b0 [726051]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
+		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.PhysicalOperator[1] @ 0xd0f61ac0 [35539]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xd74ac9f8 [38657]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
+		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.plans.PhysicalPlan @ 0xd0f5a750 [34963]
+		java.util.ArrayList @ 0xd0f61790 [35518]
+		java.lang.Object[10] @ 0xd0f617a8 [35519]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xdb6e06b0 [726051]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
+		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.plans.PhysicalPlan @ 0xd0f5a750 [34963]
+		java.util.ArrayList @ 0xd0f61790 [35518]
+		java.lang.Object[10] @ 0xd0f617a8 [35519]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xd74ac9f8 [38657]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
+		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+	at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine.reduce(Lorg/apache/pig/impl/io/PigNullableWritable;Ljava/lang/Iterable;Lorg/apache/hadoop/mapreduce/Reducer$Context;)V (PigCombiner.java:162)
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POLocalRearrange @ 0xd0f60bd0 [35452]
+		java.util.ArrayList @ 0xd0f60c50 [35454]
+		java.lang.Object[10] @ 0xd0f60c68 [35455]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xdb6e06b0 [726051]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
+		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POLocalRearrange @ 0xd0f60bd0 [35452]
+		java.util.ArrayList @ 0xd0f60c50 [35454]
+		java.lang.Object[10] @ 0xd0f60c68 [35455]
+		org.apache.pig.backend.hadoop.executionengine.physicalLayer.relationalOperators.POForEach @ 0xd0f5a838 [34968]
+		java.lang.Object[3] @ 0xd74ac9f8 [38657]
+		org.apache.pig.data.BinSedesTuple @ 0xdb6e0608 [726044]
+		java.util.ArrayList @ 0xdb6e0620 [726045]
+		java.lang.Object[1] @ 0xdb6e0638 [726046]
+		org.apache.pig.data.InternalDistinctBag @ 0xd74acab0 [38663]
+
+
+[org.apache.pig.data.DefaultDataBag @ 0xd4169e10] =>
+
+	|------ in combine() in Thread for merging in memory files ------|
+	at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine.processOnePackageOutput(Lorg/apache/hadoop/mapreduce/Reducer$Context;)Z (PigCombiner.java:200)
+		org.apache.pig.data.BinSedesTuple @ 0xd74ac970 [38652]
+		java.util.ArrayList @ 0xd74ac988 [38653]
+		java.lang.Object[3] @ 0xd74ac9a0 [38654]
+		org.apache.pig.data.InternalCachedBag @ 0xd3c340d0 [38430]
+		java.util.ArrayList @ 0xd3c34110 [38431]
+		java.lang.Object[10] @ 0xd3c34128 [38432]
+		org.apache.pig.data.BinSedesTuple @ 0xd4169e38 [38490]
+		java.util.ArrayList @ 0xd416a648 [38518]
+		java.lang.Object[1] @ 0xd416a660 [38519]
+		org.apache.pig.data.DefaultDataBag @ 0xd4169e10 [38489]
 
 
 [byte[157286400] @ 0xe0c00000] =>
@@ -100,7 +319,9 @@
 		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
 		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
 
-	at org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter.write(Ljava/lang/Object;Ljava/lang/Object;)V (Task.java:1695)
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.ProgressableReporter @ 0xd0f61ab0 [35538]
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
 		org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter @ 0xd3c27ca8 [37280]
 		org.apache.hadoop.mapred.Task$CombineOutputCollector @ 0xd0e86ec8 [17634]
 		org.apache.hadoop.mapred.IFile$Writer @ 0xd0f52e78 [34549]
@@ -108,13 +329,10 @@
 		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
 		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
 
-	at org.apache.hadoop.mapred.Task$CombineOutputCollector.collect(Ljava/lang/Object;Ljava/lang/Object;)V (Task.java:1305)
-		org.apache.hadoop.mapred.Task$CombineOutputCollector @ 0xd0e86ec8 [17634]
-		org.apache.hadoop.mapred.IFile$Writer @ 0xd0f52e78 [34549]
-		org.apache.hadoop.io.DataOutputBuffer @ 0xd0f54150 [34570]
-		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
-		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
-
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.ProgressableReporter @ 0xd0f61ab0 [35538]
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter @ 0xd3c27ca8 [37280]
 		org.apache.hadoop.mapred.Task$CombineOutputCollector @ 0xd0e86ec8 [17634]
 		org.apache.hadoop.mapred.IFile$Writer @ 0xd0f52e78 [34549]
 		org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer @ 0xd0f541a0 [34573]
@@ -122,6 +340,10 @@
 		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
 		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
 
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.ProgressableReporter @ 0xd0f61ab0 [35538]
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter @ 0xd3c27ca8 [37280]
 		org.apache.hadoop.mapred.Task$CombineOutputCollector @ 0xd0e86ec8 [17634]
 		org.apache.hadoop.mapred.IFile$Writer @ 0xd0f52e78 [34549]
 		org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer @ 0xd0f54140 [34569]
@@ -129,72 +351,209 @@
 		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
 		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
 
-	at org.apache.hadoop.mapred.IFile$Writer.append(Ljava/lang/Object;Ljava/lang/Object;)V (IFile.java:180)
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter @ 0xd3c27ca8 [37280]
+		org.apache.hadoop.mapred.Task$CombineOutputCollector @ 0xd0e86ec8 [17634]
 		org.apache.hadoop.mapred.IFile$Writer @ 0xd0f52e78 [34549]
 		org.apache.hadoop.io.DataOutputBuffer @ 0xd0f54150 [34570]
 		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
 		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
 
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter @ 0xd3c27ca8 [37280]
+		org.apache.hadoop.mapred.Task$CombineOutputCollector @ 0xd0e86ec8 [17634]
 		org.apache.hadoop.mapred.IFile$Writer @ 0xd0f52e78 [34549]
 		org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer @ 0xd0f541a0 [34573]
 		org.apache.hadoop.io.DataOutputBuffer @ 0xd0f54150 [34570]
 		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
 		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
 
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter @ 0xd3c27ca8 [37280]
+		org.apache.hadoop.mapred.Task$CombineOutputCollector @ 0xd0e86ec8 [17634]
 		org.apache.hadoop.mapred.IFile$Writer @ 0xd0f52e78 [34549]
 		org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer @ 0xd0f54140 [34569]
 		org.apache.hadoop.io.DataOutputBuffer @ 0xd0f54150 [34570]
 		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
 		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
 
-	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(Ljava/lang/Object;)V (WritableSerialization.java:77)
+	at org.apache.hadoop.mapreduce.Reducer.run(Lorg/apache/hadoop/mapreduce/Reducer$Context;)V (Reducer.java:224)
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.ProgressableReporter @ 0xd0f61ab0 [35538]
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter @ 0xd3c27ca8 [37280]
+		org.apache.hadoop.mapred.Task$CombineOutputCollector @ 0xd0e86ec8 [17634]
+		org.apache.hadoop.mapred.IFile$Writer @ 0xd0f52e78 [34549]
+		org.apache.hadoop.io.DataOutputBuffer @ 0xd0f54150 [34570]
+		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
+		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
+
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.ProgressableReporter @ 0xd0f61ab0 [35538]
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter @ 0xd3c27ca8 [37280]
+		org.apache.hadoop.mapred.Task$CombineOutputCollector @ 0xd0e86ec8 [17634]
+		org.apache.hadoop.mapred.IFile$Writer @ 0xd0f52e78 [34549]
 		org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer @ 0xd0f541a0 [34573]
 		org.apache.hadoop.io.DataOutputBuffer @ 0xd0f54150 [34570]
 		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
 		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
 
-	at org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer.serialize(Lorg/apache/hadoop/io/Writable;)V (WritableSerialization.java:90)
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.ProgressableReporter @ 0xd0f61ab0 [35538]
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter @ 0xd3c27ca8 [37280]
+		org.apache.hadoop.mapred.Task$CombineOutputCollector @ 0xd0e86ec8 [17634]
+		org.apache.hadoop.mapred.IFile$Writer @ 0xd0f52e78 [34549]
+		org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer @ 0xd0f54140 [34569]
+		org.apache.hadoop.io.DataOutputBuffer @ 0xd0f54150 [34570]
+		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
+		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
+
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter @ 0xd3c27ca8 [37280]
+		org.apache.hadoop.mapred.Task$CombineOutputCollector @ 0xd0e86ec8 [17634]
+		org.apache.hadoop.mapred.IFile$Writer @ 0xd0f52e78 [34549]
+		org.apache.hadoop.io.DataOutputBuffer @ 0xd0f54150 [34570]
+		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
+		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
+
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter @ 0xd3c27ca8 [37280]
+		org.apache.hadoop.mapred.Task$CombineOutputCollector @ 0xd0e86ec8 [17634]
+		org.apache.hadoop.mapred.IFile$Writer @ 0xd0f52e78 [34549]
 		org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer @ 0xd0f541a0 [34573]
 		org.apache.hadoop.io.DataOutputBuffer @ 0xd0f54150 [34570]
 		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
 		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
 
-	at org.apache.pig.impl.io.PigNullableWritable.write(Ljava/io/DataOutput;)V (PigNullableWritable.java:123)
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter @ 0xd3c27ca8 [37280]
+		org.apache.hadoop.mapred.Task$CombineOutputCollector @ 0xd0e86ec8 [17634]
+		org.apache.hadoop.mapred.IFile$Writer @ 0xd0f52e78 [34549]
+		org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer @ 0xd0f54140 [34569]
 		org.apache.hadoop.io.DataOutputBuffer @ 0xd0f54150 [34570]
 		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
 		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
 
-	at org.apache.pig.data.BinInterSedes.writeTuple(Ljava/io/DataOutput;Lorg/apache/pig/data/Tuple;)V (BinInterSedes.java:542)
+	at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine.reduce(Ljava/lang/Object;Ljava/lang/Iterable;Lorg/apache/hadoop/mapreduce/Reducer$Context;)V (PigCombiner.java:51)
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.ProgressableReporter @ 0xd0f61ab0 [35538]
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter @ 0xd3c27ca8 [37280]
+		org.apache.hadoop.mapred.Task$CombineOutputCollector @ 0xd0e86ec8 [17634]
+		org.apache.hadoop.mapred.IFile$Writer @ 0xd0f52e78 [34549]
 		org.apache.hadoop.io.DataOutputBuffer @ 0xd0f54150 [34570]
 		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
 		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
 
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.ProgressableReporter @ 0xd0f61ab0 [35538]
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter @ 0xd3c27ca8 [37280]
+		org.apache.hadoop.mapred.Task$CombineOutputCollector @ 0xd0e86ec8 [17634]
+		org.apache.hadoop.mapred.IFile$Writer @ 0xd0f52e78 [34549]
+		org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer @ 0xd0f541a0 [34573]
 		org.apache.hadoop.io.DataOutputBuffer @ 0xd0f54150 [34570]
 		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
 		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
 
-	at org.apache.pig.data.BinInterSedes.writeDatum(Ljava/io/DataOutput;Ljava/lang/Object;)V (BinInterSedes.java:361)
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine @ 0xd0f52dc0 [34544]
+		org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.ProgressableReporter @ 0xd0f61ab0 [35538]
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter @ 0xd3c27ca8 [37280]
+		org.apache.hadoop.mapred.Task$CombineOutputCollector @ 0xd0e86ec8 [17634]
+		org.apache.hadoop.mapred.IFile$Writer @ 0xd0f52e78 [34549]
+		org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer @ 0xd0f54140 [34569]
 		org.apache.hadoop.io.DataOutputBuffer @ 0xd0f54150 [34570]
 		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
 		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
 
-	at org.apache.pig.data.BinInterSedes.writeBag(Ljava/io/DataOutput;Lorg/apache/pig/data/DataBag;)V (BinInterSedes.java:523)
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter @ 0xd3c27ca8 [37280]
+		org.apache.hadoop.mapred.Task$CombineOutputCollector @ 0xd0e86ec8 [17634]
+		org.apache.hadoop.mapred.IFile$Writer @ 0xd0f52e78 [34549]
 		org.apache.hadoop.io.DataOutputBuffer @ 0xd0f54150 [34570]
 		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
 		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
 
-	at org.apache.pig.data.BinInterSedes.writeTuple(Ljava/io/DataOutput;Lorg/apache/pig/data/Tuple;)V (BinInterSedes.java:542)
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.hadoop.mapred.Task$NewCombinerRunner$OutputConverter @ 0xd3c27ca8 [37280]
+		org.apache.hadoop.mapred.Task$CombineOutputCollector @ 0xd0e86ec8 [17634]
+		org.apache.hadoop.mapred.IFile$Writer @ 0xd0f52e78 [34549]
+		org.apache.hadoop.io.serializer.WritableSerialization$WritableSerializer @ 0xd0f541a0 [34573]
 		org.apache.hadoop.io.DataOutputBuffer @ 0xd0f54150 [34570]
 		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
 		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
 
-	at java.io.DataOutputStream.write([BII)V (DataOutputStream.java:90)
-		org.apache.hadoop.io.DataOutputBuffer @ 0xd0f54150 [34570]
-		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
-		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
 
-	at java.io.ByteArrayOutputStream.write([BII)V (ByteArrayOutputStream.java:94)
-		org.apache.hadoop.io.DataOutputBuffer$Buffer @ 0xd0f54170 [34571]
-		byte[157286400] @ 0xe0c00000  .................8.[...30aaaxzndpkocmremjjqargwmxmrkepnrqornnfrdqgfcxj.html....0aadogwjsqwcbrjewdxolzsxvydkfmgqmgtbnqkgh.html....0aafcwusutgoizchjcwdk.html...X0aafhadhqkocxhrbthzfbtdhpnxflffjggpngsuxdjzarqckxbqzvtgkheqtkvcqcrdikyfnheozvqjtszs.html...S0aagc... [726654]
+[org.apache.pig.data.DefaultDataBag @ 0xd70d6cb0] =>
+
+	|------ in combine() in Thread for merging in memory files ------|
+	at org.apache.hadoop.mapred.Task$NewCombinerRunner.combine(Lorg/apache/hadoop/mapred/RawKeyValueIterator;Lorg/apache/hadoop/mapred/OutputCollector;)V (Task.java:1716)
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.pig.impl.io.NullableTuple @ 0xd3afe0b8 [36644]
+		org.apache.pig.data.BinSedesTuple @ 0xd3afe0d0 [36645]
+		java.util.ArrayList @ 0xd3afe0e8 [36646]
+		java.lang.Object[10] @ 0xd3afe100 [36647]
+		org.apache.pig.data.BinSedesTuple @ 0xd70d6c68 [38641]
+		java.util.ArrayList @ 0xd70d6c80 [38642]
+		java.lang.Object[1] @ 0xd70d6c98 [38643]
+		org.apache.pig.data.DefaultDataBag @ 0xd70d6cb0 [38644]
+
+	at org.apache.hadoop.mapreduce.Reducer.run(Lorg/apache/hadoop/mapreduce/Reducer$Context;)V (Reducer.java:224)
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.pig.impl.io.NullableTuple @ 0xd3afe0b8 [36644]
+		org.apache.pig.data.BinSedesTuple @ 0xd3afe0d0 [36645]
+		java.util.ArrayList @ 0xd3afe0e8 [36646]
+		java.lang.Object[10] @ 0xd3afe100 [36647]
+		org.apache.pig.data.BinSedesTuple @ 0xd70d6c68 [38641]
+		java.util.ArrayList @ 0xd70d6c80 [38642]
+		java.lang.Object[1] @ 0xd70d6c98 [38643]
+		org.apache.pig.data.DefaultDataBag @ 0xd70d6cb0 [38644]
+
+	at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine.reduce(Ljava/lang/Object;Ljava/lang/Iterable;Lorg/apache/hadoop/mapreduce/Reducer$Context;)V (PigCombiner.java:51)
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.pig.impl.io.NullableTuple @ 0xd3afe0b8 [36644]
+		org.apache.pig.data.BinSedesTuple @ 0xd3afe0d0 [36645]
+		java.util.ArrayList @ 0xd3afe0e8 [36646]
+		java.lang.Object[10] @ 0xd3afe100 [36647]
+		org.apache.pig.data.BinSedesTuple @ 0xd70d6c68 [38641]
+		java.util.ArrayList @ 0xd70d6c80 [38642]
+		java.lang.Object[1] @ 0xd70d6c98 [38643]
+		org.apache.pig.data.DefaultDataBag @ 0xd70d6cb0 [38644]
+
+	at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine.reduce(Lorg/apache/pig/impl/io/PigNullableWritable;Ljava/lang/Iterable;Lorg/apache/hadoop/mapreduce/Reducer$Context;)V (PigCombiner.java:162)
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.pig.impl.io.NullableTuple @ 0xd3afe0b8 [36644]
+		org.apache.pig.data.BinSedesTuple @ 0xd3afe0d0 [36645]
+		java.util.ArrayList @ 0xd3afe0e8 [36646]
+		java.lang.Object[10] @ 0xd3afe100 [36647]
+		org.apache.pig.data.BinSedesTuple @ 0xd70d6c68 [38641]
+		java.util.ArrayList @ 0xd70d6c80 [38642]
+		java.lang.Object[1] @ 0xd70d6c98 [38643]
+		org.apache.pig.data.DefaultDataBag @ 0xd70d6cb0 [38644]
+
+	at org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigCombiner$Combine.processOnePackageOutput(Lorg/apache/hadoop/mapreduce/Reducer$Context;)Z (PigCombiner.java:200)
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.pig.impl.io.NullableTuple @ 0xd3afe0b8 [36644]
+		org.apache.pig.data.BinSedesTuple @ 0xd3afe0d0 [36645]
+		java.util.ArrayList @ 0xd3afe0e8 [36646]
+		java.lang.Object[10] @ 0xd3afe100 [36647]
+		org.apache.pig.data.BinSedesTuple @ 0xd70d6c68 [38641]
+		java.util.ArrayList @ 0xd70d6c80 [38642]
+		java.lang.Object[1] @ 0xd70d6c98 [38643]
+		org.apache.pig.data.DefaultDataBag @ 0xd70d6cb0 [38644]
+
+	at org.apache.hadoop.mapreduce.TaskInputOutputContext.write(Ljava/lang/Object;Ljava/lang/Object;)V (TaskInputOutputContext.java:80)
+		org.apache.hadoop.mapreduce.Reducer$Context @ 0xd0f52cf8 [34542]
+		org.apache.pig.impl.io.NullableTuple @ 0xd3afe0b8 [36644]
+		org.apache.pig.data.BinSedesTuple @ 0xd3afe0d0 [36645]
+		java.util.ArrayList @ 0xd3afe0e8 [36646]
+		java.lang.Object[10] @ 0xd3afe100 [36647]
+		org.apache.pig.data.BinSedesTuple @ 0xd70d6c68 [38641]
+		java.util.ArrayList @ 0xd70d6c80 [38642]
+		java.lang.Object[1] @ 0xd70d6c98 [38643]
+		org.apache.pig.data.DefaultDataBag @ 0xd70d6cb0 [38644]
 
 
